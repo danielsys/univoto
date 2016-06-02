@@ -1,0 +1,20 @@
+
+.owl-theme .owl-controls{ height:0px; margin:20px 0 0 0; position:relative; float:right}
+/* Styling Next and Prev buttons */
+.owl-theme .owl-controls .owl-buttons div{ color: #000;	display: inline-block; zoom: 1; *display: inline;}
+
+.owl-theme .owl-controls.clickable .owl-buttons div:hover{	filter: Alpha(Opacity=100);/*IE7 fix*/	opacity: 1;	text-decoration: none;
+}
+.owl-theme .owl-controls .owl-page{	display: inline-block;	zoom: 1; *display: inline;/*IE7 life-saver */}
+.owl-theme .owl-controls .owl-page span{display: block;	width:25px; height:10px; margin: 5px 4px;  background:#000; border:0}
+.owl-theme .owl-controls .owl-page.active span, .owl-theme .owl-controls.clickable .owl-page:hover span{ background: #09F}
+.owl-item.loading{min-height: 150px; background: url(AjaxLoader.gif) no-repeat center center}
+
+@media screen and (max-width: 480px) {
+.owl-theme .owl-controls .owl-page span{display: block;	width: 10px; height: 10px;}
+.owl-theme .owl-controls{margin:15px 40% 0 0; position:relative; float:right}
+}
+
+@media screen and (min-width: 1050px) {
+
+}

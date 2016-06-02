@@ -1,0 +1,63 @@
+@media screen and (max-width: 980px) {
+
+.centralizar {width:100%; margin:0 auto;}
+
+.logo_partido{ display:none}
+.logo_partido_responsivo{width:100%; background:#EEE; padding:16px}
+.logo_partido_responsivo img{ width:30%}
+
+.box_menu{ margin:0}
+.menu_topo { width:100%; margin:0 }
+	.menu_topo a, menu_topo a:visited, menu_topo a:active { width:100%; display:block; font-size:1.6rem; letter-spacing:0; color:#FFF; font-weight:900; padding:32px 18px; float:left}
+	.menu_topo a:hover{ background:#2FB3CD}
+	
+.logo_partido{ display:none;}
+.logo_partido_responsivo{ display: inherit; width:100%; text-align:center;}
+
+#capa{ width:100%; height:auto; padding:0; margin:0;  background:#3BCED5}
+	
+	.foto_perfil{ width:100%; text-align:center; padding:25px 10%; background:none}
+	.foto_perfil img{ padding:5px; background:#FFF}
+	
+	.info_candidato{ width:100%; margin:0; text-align:center; padding:0;}
+		.numero_nome{ margin:0; }
+			.info_candidato span{ font-size:1.8rem;}
+			.info_candidato h1{ font-size:2.5rem;}
+			.info_candidato h2{ font-size:10rem;}
+			
+	.links_extras{ width:290px; margin:0 auto}	
+		.links_extras a, links_extras a:visited, links_extras a:active { display:block; width:auto; font-size:1.4rem; letter-spacing:0; color:#FFF; font-weight:900; padding:12px 12px; margin:25px 10px 0 0;}
+	.rede_sociais{ width:100%; text-align:center; margin:25px 0 0 0}
+		.rede_sociais img { border:1px solid #FFF; padding:5px; margin:15px 2px}
+		
+	.visualizacoes{background:#2FB3CD; width:100%; padding:20px; margin:0 auto;}	
+
+#conteudo{width:100%;}
+
+.box_esquerda{ width:85%; margin:0 7.5%}
+	#noticias{height:auto; padding:0;}
+		.noticia_box{ padding:45px 0;}
+			.noticia_box img{ width:100%; margin:0 0 3% 0}
+			.noticia_box h2{ font-size:2rem; color:#666666}
+			.noticia_box h1, .banner_box h2{ line-height:2rem}
+
+.box_direita{ width:85%; margin:0 7.5%}
+
+#videos{ width:100%; padding:10px; margin:0; background:#EEE}	
+	.h1_videos{width:85%; margin:0 7.5%}
+	.video_principal{ width:90%; padding:15px 15px; margin:0 5% 25px 5%; background:#FFF}
+	.videos_miniatura{  width:85%; text-align:left !important; margin:0 7.5%}
+	.box_ministura_video{ margin:0 0 15px 0}
+	.box_ministura_video img{ width:30%; margin:0 2% 0 0}	
+	.data_titulo_video_miniatura{ padding: 0  !important}
+			.data_titulo_video_miniatura h1{ margin:0}	
+}
+
+@media screen and (max-width: 800px) {
+}
+@media screen and (max-width: 768px) {	
+}
+@media screen and (max-width: 480px)  {
+	
+}
+
