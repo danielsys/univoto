@@ -1,6 +1,6 @@
 <?php
     ob_start();
-    
+    //TESTE
     require('./_app/Config.inc.php');
 
     $Url[1] = (empty($Url[1]) ? null : $Url[1]);        
@@ -37,6 +37,8 @@
         <link rel="stylesheet" href="<?= INCLUDE_PATH; ?>/css/menu.css">
         <link rel="stylesheet" href="<?= INCLUDE_PATH; ?>/css/responsivo.css">
         <link rel="stylesheet" href="<?= INCLUDE_PATH; ?>/css/boot.css">
+        <link rel="stylesheet" href="<?= INCLUDE_PATH; ?>/css/redes_sociais.css">
+        <link rel="stylesheet" href="<?= INCLUDE_PATH; ?>/css/Pe-icon-7-stroke.css">
     
         <script src="<?= HOME;?>/_script/jquery.js"></script>
 
