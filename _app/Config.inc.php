@@ -16,7 +16,7 @@ define('MAILHOST', '');
 define('DOMINIO', 'univoto.com.br');
 
 // DEFINE IDENTIDADE DO SITE ################
-define('SITENAME', 'Candidato');
+define('SITENAME', 'Univoto');
 define('SITEDESC', 'Descricao');
 
 // DEFINE A BASE DO SITE ####################
