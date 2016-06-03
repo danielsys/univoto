@@ -1,4 +1,5 @@
 <?php
+    //START
     ob_start();
     require('./_app/Config.inc.php');
 
