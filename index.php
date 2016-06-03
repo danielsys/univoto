@@ -1,14 +1,6 @@
 <?php
-
-    //START21 - ALTER
-    //ALTER2
-
     ob_start();
     
-    
-    //w
-    
-    //DAN
     require('./_app/Config.inc.php');
 
     $Url[1] = (empty($Url[1]) ? null : $Url[1]);        
@@ -19,9 +11,7 @@
 
     //$Acesso = new Read();
     //$Acesso->FullRead("UPDATE site SET acessos = acessos + 1 WHERE site = :site", "site={$site['idsite']}");
-
-    //INICIO DA PAGINA HTML
-    ?>
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
