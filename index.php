@@ -3,6 +3,8 @@
     //START21 - ALTER
     //ALTER2
     ob_start();
+    
+    //DAN
     require('./_app/Config.inc.php');
 
     $Url[1] = (empty($Url[1]) ? null : $Url[1]);        
