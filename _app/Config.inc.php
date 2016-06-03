@@ -20,7 +20,7 @@ define('SITENAME', 'Univoto');
 define('SITEDESC', 'Descricao');
 
 // DEFINE A BASE DO SITE ####################
-define('HOME', 'http://localhost/univoto/trunk');
+define('HOME', 'http://localhost/univoto');
 define('THEME', 'candidato');
 
 define('INCLUDE_PATH', HOME . '/' . 'theme' . '/' . THEME);
