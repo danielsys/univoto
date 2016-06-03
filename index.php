@@ -15,7 +15,9 @@
 
     //$Acesso = new Read();
     //$Acesso->FullRead("UPDATE site SET acessos = acessos + 1 WHERE site = :site", "site={$site['idsite']}");
-?>
+
+    //INICIO DA PAGINA HTML
+    ?>
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
