@@ -1,5 +1,7 @@
 <?php
+
     //START21 - ALTER
+    //ALTER2
     ob_start();
     require('./_app/Config.inc.php');
 
