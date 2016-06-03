@@ -1,5 +1,5 @@
 <?php
-    //START21
+    //START21 - ALTER
     ob_start();
     require('./_app/Config.inc.php');
 
