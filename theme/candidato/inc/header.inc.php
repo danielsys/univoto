@@ -29,21 +29,21 @@
         	</div>
 <!-- LINKS EXTRAS !-->
             <div class="links_extras">
-            	<a href="" class="links_extras transicao"><img src="<?= INCLUDE_PATH; ?>/img/icones/agenda.png" />AGENDA</a>
-                <a href="" class="links_extras transicao"><img src="<?= INCLUDE_PATH; ?>/img/icones/linha_de_tempo.png" />LINHA DO TEMPO</a>
+            	<a href="" class="links_extras transicao"><i class="pe-7s-shield"></i>AGENDA</a>
+                <a href="" class="links_extras transicao"><i class="pe-7s-shield"></i>LINHA DO TEMPO</a>
             </div>
             
         </div>
 <!-- FIM NOME, NUMERO E LINKS !--> 
 
-<?php if ($site['social_facebook']!='' && $site['social_instagram']!='' && $site['social_twitter']!='') { ?>
+<?php if ($site['social_facebook']!='' && $site['social_instagram']!='' && $site['social_twitter']!='' && $site['social_youtube']!='') { ?>
 <!-- REDES SOCIAIS ICONES !--> 
         <div class="rede_sociais al-centro fl-right">
         	<h1 class="cor_branca">REDES SOCIAIS</h1>
-                <?php if ($site['social_facebook']!='') { ?><a href="https://www.facebook.com/<?=$site['social_facebook'];?>"><img src="<?= INCLUDE_PATH; ?>/img/icones/facebook_header.png" /></a><?php } ?>
-                <?php if ($site['social_instagram']!='') { ?><a href="http://www.instagram.com/<?=$site['social_instagram'];?>"><img src="<?= INCLUDE_PATH; ?>/img/icones/instagram_header.png" /></a><?php } ?>
-                <?php if ($site['social_twitter']!='') { ?><a href="http://www.twitter.com/<?=$site['social_twitter'];?>"><img src="<?= INCLUDE_PATH; ?>/img/icones/twitter_header.png" /></a><?php } ?>
-                <?php if ($site['social_youtube']!='') { ?><a href="http://www.youtube.com/users/<?=$site['social_youtube'];?>"><img src="<?= INCLUDE_PATH; ?>/img/icones/youtube_header.png" /></a><?php } ?>
+                <?php if ($site['social_facebook']!='') { ?><a href="https://www.facebook.com/<?=$site['social_facebook'];?>"><i class="socicon-facebook"></i></a><?php } ?>
+                <?php if ($site['social_instagram']!='') { ?><a href="http://www.instagram.com/<?=$site['social_instagram'];?>"><span class="icon socicon-instagram"></span></a><?php } ?>
+                <?php if ($site['social_twitter']!='') { ?><a href="http://www.twitter.com/<?=$site['social_twitter'];?>"><span class="icon socicon-twitter"></span></a><?php } ?>
+                <?php if ($site['social_youtube']!='') { ?><a href="http://www.youtube.com/users/<?=$site['social_youtube'];?>"><span class="icon socicon-youtube"></span></a><?php } ?>
                 
         </div>
 <?php } ?>

@@ -9,8 +9,8 @@
             
             <div class="info_base espaco_menor">
             	<img src="<?= INCLUDE_PATH; ?>/img/foto_candidato.png" class="fl-left" />
-            	<h1 class="fontsize1">NOME DO CANDIDATO </h1><br>
-                <h2 class="fontsize4 fonte900">22123</h2><br>
+            	<h1 class="fontsize1"><?php echo $site['site_nome']; ?></h1><br>
+                <h2 class="fontsize4 fonte900"><?php echo $site['adicional1']; ?></h2><br>
                 <img src="<?= INCLUDE_PATH; ?>/img/logo_partido.png" />
              </div>
         </div>

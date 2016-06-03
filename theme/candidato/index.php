@@ -29,7 +29,7 @@
 
 
         <div id="noticia">
-            <?php
+<?php
                 $post = new Read();
                 $post->ExeRead("post", "ORDER BY idpost DESC LIMIT :limit OFFSET :offset", "limit=1&offset=0");
                 
@@ -40,7 +40,6 @@
                         $View->Show($noticia, $index_noticia_destaque);
                     endforeach;
                 endif;
-
                 $post->setPlaces("limit=8&offset=1");
                 
                 if ($post->getResult()):
@@ -57,8 +56,8 @@
     <!-- BOX ESQUERDA!-->          
     <div class="box_direita fl-right">
         <div class="box_agenda_redes bloquear_linha width100"><!-- AGENDA!-->
-            <h1 class="bloquear_linha width100 fontsize1b fonte900">AGENDA</h1>
-
+            <h1 class="bloquear_linha width100 fontsize1b fonte900">AGENDA <i class="pe-7s-target"></i></h1>
+			<a href="">
             <div class="agenda_principal bloquear_linha bg_branco width100">
                 <div class="data_agenda_principal bg_preto al-centro fl-left">
                     <h1 class="fontsize2b cor_branca fonte900">04</h1>
@@ -68,8 +67,9 @@
                     <span class="fontsize1">COMICIO NO BAIRRO TAL</span>
                 </div>
             </div>
+            </a>
             <!-- agenda 1 !-->
-
+			<a href="">
             <div class="agenda_principal bloquear_linha bg_branco width100">
                 <div class="data_agenda_principal bg_preto al-centro fl-left">
                     <h1 class="fontsize2b cor_branca fonte900">05</h1>
@@ -79,9 +79,10 @@
                     <span class="fontsize1">COMICIO NO BAIRRO TAL</span>
                 </div>
             </div>
+            </a>
             <!-- agenda 2 !-->
 
-
+			<a href="">
             <div class="agenda_principal bloquear_linha bg_branco width100 ">
                 <div class="data_agenda_principal bg_preto al-centro fl-left">
                     <h1 class="fontsize2b cor_branca fonte900">06</h1>
@@ -91,8 +92,9 @@
                     <span class="fontsize1">COMICIO NO BAIRRO TAL</span>
                 </div>
             </div>
+            </a>
             <!-- agenda 3 !-->
-
+			<a href="">
             <div class="agenda_principal bloquear_linha bg_branco width100">
                 <div class="data_agenda_principal bg_preto al-centro fl-left">
                     <h1 class="fontsize2b cor_branca fonte900">07</h1>
@@ -102,8 +104,9 @@
                     <span class="fontsize1">COMICIO NO BAIRRO TAL</span>
                 </div>
             </div>
+            </a>
             <!-- agenda 4 !-->
-
+			<a href="">
             <div class=" agenda_principal bloquear_linha bg_branco width100 5">
                 <div class="data_agenda_principal bg_preto al-centro fl-left">
                     <h1 class="fontsize2b cor_branca fonte900">08</h1>
@@ -113,6 +116,7 @@
                     <span class="fontsize1">COMICIO NO BAIRRO TAL</span>
                 </div>
             </div>
+            </a>
             <!-- agenda 5 !-->
         </div>
 
