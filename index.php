@@ -4,7 +4,7 @@
     require('./_app/Config.inc.php');
 
     $Url[1] = (empty($Url[1]) ? null : $Url[1]);        
-    // Weverton
+    
     $Vereador = new Read();
     $Vereador->ExeRead("site", "WHERE site = :site ", "site={$Url[0]}");
     $site = $Vereador->getResult()[0];
