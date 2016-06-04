@@ -37,5 +37,3 @@
           });
         });
         </script>
-
-    <script src="tema/visual/js/index.js"></script>

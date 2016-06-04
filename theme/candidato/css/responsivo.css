@@ -44,7 +44,7 @@
 .box_direita{ width:85%; margin:0 7.5%}
 
 #videos{ width:100%; padding:10px; margin:0; background:#EEE}	
-	.h1_videos{width:85%; margin:0 7.5%}
+	.h1_videos{width:85%; padding:0 10%}
 	.video_principal{ width:90%; padding:15px 15px; margin:0 5% 25px 5%; background:#FFF}
 	.videos_miniatura{  width:85%; text-align:left !important; margin:0 7.5%}
 	.box_ministura_video{ margin:0 0 15px 0}

@@ -3,6 +3,9 @@
     $index_slide = $View->Load('index_slide');
     $index_noticia_destaque = $View->Load('index_noticia_destaque');
     $index_noticia_lista = $View->Load('index_noticia_lista');
+    $index_video_destaque = $View->Load('index_video_destaque');
+    $index_video_lista = $View->Load('index_video_lista');
+
 ?>
 <!-- CONTEÚDO CENTRO !-->
 <section id="conteudo" class="bloquear_linha">
@@ -31,8 +34,7 @@
         <div id="noticia">
 <?php
                 $post = new Read();
-                $post->ExeRead("post", "ORDER BY idpost DESC LIMIT :limit OFFSET :offset", "limit=1&offset=0");
-                
+                $post->ExeRead("post", "WHERE video = '' ORDER BY idpost DESC LIMIT :limit OFFSET :offset", "limit=1&offset=0");
                 if ($post->getResult()):
                     foreach($post->getResult() as $noticia):
                         $noticia['SITE'] = $site['site'];
@@ -40,7 +42,7 @@
                         $View->Show($noticia, $index_noticia_destaque);
                     endforeach;
                 endif;
-                $post->setPlaces("limit=8&offset=1");
+                $post->setPlaces("limit=4&offset=1");
                 
                 if ($post->getResult()):
                     foreach($post->getResult() as $noticia):
@@ -141,38 +143,38 @@
         <h1 class="bloquear_linha width100 h1_videos  espaco_menor fontsize2b fonte900">VÍDEOS</h1>
         <div class=" bloquear_linha">
             <div class="video_principal fl-left">
-                <img src="tema/visual/img/materia-principal.jpg" class="width100" />
-                <h1 class=" fontsize1 cor_laranja fonte900">11 DE JULHO DE 2016</h1>
-                <h2 >Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                </h2>
+                <?php
+                
+                $Video='';
+                
+                $post->ExeRead("post", "WHERE video <> '' ORDER BY idpost DESC LIMIT :limit OFFSET :offset", "limit=1&offset=0");
+                if ($post->getResult()):
+                    foreach($post->getResult() as $noticia):
+                        $noticia['SITE'] = $site['site'];
+                        $noticia['publicacao'] = Check::DataExtenso($noticia['publicacao']);
+                        $View->Show($noticia, $index_video_destaque);
+                    endforeach;
+                endif;
+                
+                
+                
+            ?>
             </div>
 
             <div class="videos_miniatura fl-right">
-
-                <div class="box_ministura_video bloquear_linha width100">
-                    <img src="tema/visual/img/materia-principal.jpg" class="fl-left" />
-                    <div class="data_titulo_video_miniatura">
-                        <h1 class=" fontsize1 cor_laranja fonte900">13/05/2016</h1>
-                        <h2 >REUNIÃO SOBRE OBRA DO AEROPORTO DE MACAPÁ</h2>
-                    </div>
-                </div>
-
-                <div class="box_ministura_video bloquear_linha width100">
-                    <img src="tema/visual/img/materia-principal.jpg" class="fl-left" />
-                    <div class="data_titulo_video_miniatura">
-                        <h1 class=" fontsize1 cor_laranja fonte900">13/05/2016</h1>
-                        <h2 >REUNIÃO SOBRE OBRA DO AEROPORTO DE MACAPÁ</h2>
-                    </div>
-                </div>
-
-                <div class="box_ministura_video bloquear_linha width100">
-                    <img src="tema/visual/img/materia-principal.jpg" class="fl-left" />
-                    <div class="data_titulo_video_miniatura">
-                        <h1 class=" fontsize1 cor_laranja fonte900">13/05/2016</h1>
-                        <h2 >REUNIÃO SOBRE OBRA DO AEROPORTO DE MACAPÁ</h2>
-                    </div>
-                </div>
-
+                <?php
+                
+                $post->setPlaces("limit=3&offset=1");
+                if ($post->getResult()):
+                    foreach($post->getResult() as $noticia):
+                        $noticia['SITE'] = $site['site'];
+                        $noticia['publicacao'] = Check::DataExtenso($noticia['publicacao']);
+                        $View->Show($noticia, $index_video_lista);
+                    endforeach;
+                endif;
+                
+                ?>
+              
             </div>
         </div>
     </div>
