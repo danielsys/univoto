@@ -53,13 +53,13 @@
             
 ?>
 
-        <form name="PostForm" action="" method="post" enctype="multipart/form-data">
+<form name="PostForm" action="" method="post" enctype="multipart/form-data" class="formPadrao">
 
             <label class="label">
                 <span class="field">Capa (Imagem):</span>
                 <input type="file" name="capa" />
             </label>
-
+c
             <label class="label">
                 <span class="field">Tipo de Post:</span>
                 <select name="post_tipo">
@@ -80,7 +80,7 @@
             
             <label class="label">
                 <span class="field">Conteúdo:</span>
-                <textarea class="js_editor" name="conteudo" rows="10"><?php if (isset($post['conteudo'])) echo htmlspecialchars($post['conteudo']); ?></textarea>
+                <textarea class="js_editor editor" name="conteudo" rows="40"><?php if (isset($post['conteudo'])) echo htmlspecialchars($post['conteudo']); ?></textarea>
             </label>
 
             <div class="label_line">

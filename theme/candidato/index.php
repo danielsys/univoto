@@ -161,7 +161,7 @@
             ?>
             </div>
 
-            <div class="videos_miniatura fl-right">
+            <div class="videos_miniatura fl-left">
                 <?php
                 
                 $post->setPlaces("limit=3&offset=1");

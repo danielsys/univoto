@@ -245,3 +245,16 @@ h3{font-size: 1.6em;}
 h4{font-size: 1.4em;}
 
 #tinymce .mceContentBody p { font-family: sans-serif; font-size: 18px; }
+
+
+/*FORMULARIO*/
+.formPadrao{ padding: 15px 15px; }
+ .formPadrao input{ width: 98.5%; padding: 10px 5px; margin: 15px 0}
+    .editor{ width: 100%}
+ .formPadrao select{ padding: 10px 5px; margin: 15px 0}  
+
+.col1{ width: 100%} 
+.col2{ width: 50%}
+.col3{ width: 33.3%}
+.col4{ width: 25%}
+.col5{ width: 20%}

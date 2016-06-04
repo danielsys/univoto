@@ -42,6 +42,7 @@
         <link rel="stylesheet" href="<?= INCLUDE_PATH; ?>/css/Pe-icon-7-stroke.css">
     
         <script src="<?= HOME;?>/_script/jquery.js"></script>
+        <script src="<?= INCLUDE_PATH; ?>/js/index.js"></script>
 
         <link href="<?= HOME; ?>/_script/banner-scripts/owl.carousel.css" rel="stylesheet">
         <link href="<?= HOME; ?>/_script/banner-scripts/owl.theme.css" rel="stylesheet">

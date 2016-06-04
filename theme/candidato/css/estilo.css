@@ -120,8 +120,9 @@ span{ letter-spacing:0}
                             .texto_agenda_principal{ width:75%; color:#333; padding:5%}
 	
 #videos{ height:auto; padding:45px 0;  margin:50px 0 0 0; background:#eee}	
-	.video_principal{ width:45%}
-		.video_principal img{ margin:0 0 2% 0 }
+	.video_principal{ width:45%;}
+            .video_principal a, .video_principal a:visited, .video_principal a:link, .video_principal a:active{ display: block; width:100%; padding: 0; margin: 0;}
+		.video_principal img{ width: 100%; margin:0 0 2% 0 }
 	.videos_miniatura{ width:52%;}
 		.box_ministura_video{ margin:0 0 15px 0}
 		.box_ministura_video img{ width:26%; margin:0 2% 0 0}
