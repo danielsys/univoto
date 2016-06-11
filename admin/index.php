@@ -2,7 +2,36 @@
 ob_start();
 session_start();
 require('../_app/Config.inc.php');
-?><!doctype html>
+
+$login = new Login(1);
+if ($login->CheckLogin()):
+    header('Location:painel.php');
+endif;
+
+$dataLogin = filter_input_array(INPUT_POST, FILTER_DEFAULT);
+if (!empty($dataLogin['AdminLogin'])):
+
+    $login->ExeLogin($dataLogin);
+
+    if (!$login->getResult()):
+        $msg_alert = $login->getError()[0];
+    else:
+        header('Location:painel.php');
+    endif;
+
+endif;
+
+$getexe = filter_input(INPUT_GET, 'exe', FILTER_DEFAULT);
+if (!empty($getexe)):
+    if ($getexe == 'restrito'):
+        $msg_alert = 'Acesso negado. Favor efetue login para acessar o painel!';
+    elseif ($getexe == 'logoff'):
+        $msg_alert = '<b>Sucesso ao deslogar:</b> Sua sessão foi finalizada.!';
+    endif;
+endif;
+?>
+
+<!doctype html>
 <html lang="en">
     <head>
         <meta charset="utf-8" />
@@ -47,35 +76,6 @@ require('../_app/Config.inc.php');
             </div>
         </nav>
 
-
-        <?php
-        $login = new Login(1);
-        if ($login->CheckLogin()):
-            header('Location:painel.php');
-        endif;
-
-        $dataLogin = filter_input_array(INPUT_POST, FILTER_DEFAULT);
-        if (!empty($dataLogin['AdminLogin'])):
-
-            $login->ExeLogin($dataLogin);
-
-            if (!$login->getResult()):
-                $msg_alert = $login->getError()[0];
-            else:
-                header('Location:painel.php');
-            endif;
-
-        endif;
-
-        $getexe = filter_input(INPUT_GET, 'exe', FILTER_DEFAULT);
-        if (!empty($getexe)):
-            if ($getexe == 'restrito'):
-                $msg_alert = 'Acesso negado. Favor efetue login para acessar o painel!';
-            elseif ($getexe == 'logoff'):
-                $msg_alert = '<b>Sucesso ao deslogar:</b> Sua sessão foi finalizada.!';
-            endif;
-        endif;
-        ?>
 
         <div class="wrapper wrapper-full-page">
             <div class="full-page login-page" data-color="orange" data-image="img/full-screen-image-1.jpg">   
@@ -209,14 +209,14 @@ require('../_app/Config.inc.php');
             }, 700)
 
 
-            <?php if (isset($msg_alert)): ?>
-            $.notify({ message: '<?=$msg_alert; ?>'},
-                    {
-                        placement: {
-                            align: 'center'
-                        }
-                    });
-            <?php endif; ?>
+<?php if (isset($msg_alert)): ?>
+                $.notify({message: '<?= $msg_alert; ?>'},
+                        {
+                            placement: {
+                                align: 'center'
+                            }
+                        });
+<?php endif; ?>
         });
     </script>
 

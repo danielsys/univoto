@@ -1,29 +1,68 @@
-      <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
-        <header class="demo-drawer-header">
-            <img src="images/header_logo.png" >
-            <hr>
-          <div class="demo-avatar-dropdown">
-            <span><?php echo $userlogin['users_name']; ?></span>
-            
-            <div class="mdl-layout-spacer"></div>
-            <button id="accbtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-              <i class="material-icons" role="presentation">arrow_drop_down</i>
-              <span class="visuallyhidden">Accounts</span>
-            </button>
-            <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn">
-                <li class="mdl-menu__item"><a class="mdl-color-text--blue-grey-400" href="painel.php?exe=users/profile">Alterar Senha</a></li>
-              <li class="mdl-menu__item"><a class="mdl-color-text--blue-grey-400" href="painel.php?logoff=true">Sair</a></li>
-            </ul>
-          </div>
-        </header>
-        <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
-          <a class="mdl-navigation__link" href="painel.php"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Home</a>
-          <a class="mdl-navigation__link" href="painel.php?exe=post/index"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">subject</i>Post</a>
-          <a class="mdl-navigation__link" href="painel.php?exe=sms/index"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">forum</i>SMS</a>
-          <a class="mdl-navigation__link" href="painel.php?exe=users/users">Usuários</a>
-          <a class="mdl-navigation__link" href="painel.php?exe=socials/index"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">people</i>Redes Sociais</a>
-          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">flag</i>Novidades</a>
-          <div class="mdl-layout-spacer"></div>
-          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">help_outline</i>Ajuda</a>
-        </nav>
-      </div>
+                <div class="sidebar-wrapper">
+
+                    <div class="user">
+                        <div class="photo">
+                            <img src="img/default-avatar.png" />
+                        </div>                 
+                        <div class="info">
+                            <a data-toggle="collapse" href="#collapseExample" class="collapsed">
+                                <?=$userlogin['users_name'] . " " . $userlogin['users_lastname']; ?>
+                                <b class="caret"></b>
+                            </a>                
+                            <div class="collapse" id="collapseExample">
+                                <ul class="nav">
+                                    <li><a href="users/index">Perfil</a></li>
+                                    <li><a href="users/password">Alterar Senha</a></li>
+                                    <li><a href="painel.php?logoff=true">Sair</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <ul class="nav">
+                        <li <?php if (!isset($getexe)) echo 'class="active"'; ?> >                   
+                            <a href="painel.php">
+                                <i class="pe-7s-graph"></i> 
+                                <p>Dashboard</p>
+                            </a>                
+                        </li>
+                        <li>                   
+                            <a data-toggle="collapse" href="#componentsExamples">                        
+                                <i class="pe-7s-news-paper"></i> 
+                                <p>Posts
+                                    <b class="caret"></b>
+                                </p>
+                            </a>                
+                            <div class="collapse" id="componentsExamples">
+                                <ul class="nav">
+                                    <li><a href="painel.php?exe=post/index">Todos os Posts</a></li>
+                                    <li><a href="painel.php?exe=post/add">Adicionar Post</a></li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li>                   
+                            <a href="painel.php?exe=analytics/index">
+                                <i class="fa fa-line-chart"></i> 
+                                <p>Analytics</p>
+                            </a>                
+                        </li>
+                        
+                        <li class="divider"></li>
+                        
+                        <li>
+                            <a href="painel.php?exe=config/index">
+                                <i class="pe-7s-tools"></i>
+                                <p>Configurações</p>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="painel.php?exe=suporte/index">
+                                <i class="pe-7s-help1"></i>
+                                <p>Suporte</p>
+                            </a>
+                        </li>
+                    </ul>  
+                </div>
