@@ -25,14 +25,27 @@ $consumer_secret = 'DKg0NPkeNdLQLxn6hMUcMTg7tLyNCeTByDqJv8HoDGNdRx76pL';
 var_dump($_SESSION);
 var_dump($_COOKIE);
 
+echo "<p>Cunsumer_key: {$consumer_key}</p>";
+echo "<p>consumer_secret: {$consumer_secret}</p>";
+echo "<p>oauth_token: {$_SESSION['oauth_token']}</p>";
+echo "<p>oauth_token_secret: {$_SESSION['oauth_token_secret']}</p>";
+
+
 //EXCHANGING THE TOKENS FOR OAUTH TOKEN AND TOKEN SECRET
 $connection = new TwitterOAuth($consumer_key, $consumer_secret, $_SESSION['oauth_token'], $_SESSION['oauth_token_secret']);
 echo "<font color=blue>";
 var_dump($connection);
 echo "</font>";
 
-$statuses = $connection->get("search/tweets", ["q" => "twitterapi"]);
+echo "<font color=red>";
+$statuses = $connection->get("statuses/home_timeline", ["count" => 25, "exclude_replies" => true]);
 var_dump($statuses);
+
+
+
+
+
+echo "</font>";
 
 //$access_token = $connection->url("oauth/autorize", array("oauth_token" => $_SESSION['oauth_token']));
 //var_dump($access_token);

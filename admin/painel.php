@@ -32,6 +32,7 @@ if ($logoff) {
 }
 
 $userlogin['site'] = (!isset($userlogin['site']) ? '' : $userlogin['site']);
+
 ?>
 <!doctype html>
 <html lang="en">

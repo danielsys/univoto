@@ -16,7 +16,7 @@ define('PARAM1', "3091781476-ncJTgcllxUVLr4pzqvNOHhfYPCY0Sd4aQHc5V2q");
 define('PARAM2', "SP2TaqhRCMTpyirlKS2uWO083KKJMHv9z7MghFtrPsr8x");
 
 $connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET);
-
+$connection->setTimeouts(20, 30);
 
 //$url = $connection->url("oauth/authorize", ["oauth_token" => "3091781476-ncJTgcllxUVLr4pzqvNOHhfYPCY0Sd4aQHc5V2q"]);
 //echo '<a href="'. $url.  '">Entrar</a>';
@@ -24,7 +24,7 @@ $connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET);
 //$request_token = $connection->oauth(OAUTH_CALLBACK);
 //$content = $connection->get("request_token");
 //$request_token = $connection->oauth("oauth/request_token", array("oauth_callback" => "http://www.univoto.com.br/twitte.php"));
-$request_token = $connection->oauth("oauth/request_token", array("oauth_callback" => "http://localhost/candidato/tw2.php"));
+$request_token = $connection->oauth("oauth/request_token", array("oauth_callback" => "http://localhost/univoto/tw2.php"));
 
 //$page = $connection->getRequestToken('http://localhost.com/twitter_oauth.php');  
 

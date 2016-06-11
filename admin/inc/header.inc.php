@@ -8,7 +8,7 @@
             <div class="mdl-layout-spacer"></div> 
             <!-- Navigation -->
             <nav class="mdl-navigation">
-                <b style="text-transform: uppercase;"><?= Check::SiteById($userlogin['site']) . "." . DOMINIO; ?></b>
+                <b style="text-transform: uppercase;"><?= Check::SiteById($userlogin['site']) . "." . DOMINIO; ?> (<?=$userlogin['site'];?>)</b>
             </nav>
         </div>
     </header>

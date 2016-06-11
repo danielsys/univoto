@@ -32,10 +32,14 @@ var_dump($_COOKIE);
 
 //EXCHANGING THE TOKENS FOR OAUTH TOKEN AND TOKEN SECRET
 $connection = new TwitterOAuth($consumer_key, $consumer_secret, $oauth_token, $oauth_verifier);
+$connection->setTimeouts(20, 30);
 $access_token = $connection->oauth("oauth/access_token", array("oauth_verifier" => $oauth_verifier));
 
+$_SESSION['access_token'] = $access_token;
 
+echo "<font color=red>";
 var_dump($access_token);
+echo "</font>";
 
 $accessToken=$access_token['oauth_token'];
 $secretToken=$access_token['oauth_token_secret'];
@@ -53,3 +57,5 @@ echo "<b>Secret Token : </b>".$secretToken."<br />";
 //echo "<b>Secret Token : </b>".$secretToken."<br />";
 
  ?>
+
+<a href="tw4.php">Next</a>

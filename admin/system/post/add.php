@@ -25,7 +25,7 @@
             endif;
         ?>
 
-        <form name="PostForm" action="" method="post" enctype="multipart/form-data">
+        <form name="PostForm" action="" method="post" enctype="multipart/form-data" class="formPadrao">
 
             <label class="label">
                 <span class="field">Capa (Imagem):</span>

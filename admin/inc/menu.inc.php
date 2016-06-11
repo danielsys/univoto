@@ -21,7 +21,7 @@
           <a class="mdl-navigation__link" href="painel.php?exe=post/index"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">subject</i>Post</a>
           <a class="mdl-navigation__link" href="painel.php?exe=sms/index"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">forum</i>SMS</a>
           <a class="mdl-navigation__link" href="painel.php?exe=users/users">Usuários</a>
-          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">people</i>Redes Sociais</a>
+          <a class="mdl-navigation__link" href="painel.php?exe=socials/index"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">people</i>Redes Sociais</a>
           <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">flag</i>Novidades</a>
           <div class="mdl-layout-spacer"></div>
           <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">help_outline</i>Ajuda</a>
