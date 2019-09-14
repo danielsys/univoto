@@ -8,6 +8,7 @@
  *
  * Examples and documentation available on the project homepage
  * http://www.binarymoon.co.uk/projects/timthumb/
+ * Daniel Lima
  */
 
 define ('CACHE_SIZE', 1000);				// number of files to store before clearing cache
