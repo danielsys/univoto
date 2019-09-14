@@ -2,11 +2,12 @@
 /**
  * TimThumb script created by Ben Gillbanks, originally created by Tim McDaniels and Darren Hoyt
  * http://code.google.com/p/timthumb/
-
-
+ * 
+ * GNU General Public License, version 2
+ * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ *
  * Examples and documentation available on the project homepage
  * http://www.binarymoon.co.uk/projects/timthumb/
- * Daniel Lima
  */
 
 define ('CACHE_SIZE', 1000);				// number of files to store before clearing cache
